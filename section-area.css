@@ -1,0 +1,51 @@
+section{
+  z-index:50;
+  position: absolute;
+  display: flex;
+  top: 75px;
+  left: 85px;
+  column-gap: 15px;
+  row-gap: 15px;
+  flex-wrap: wrap;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  transition: all 0.5s;
+}
+
+nav:active ~ .icon-1{
+  opacity: 0.8;
+}
+
+.flex_box{
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items:center;
+  justify-content: center;
+  background-color: #fafafa;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: -2px -2px 35px rgba(0, 0, 0, 0.5);
+  object-position: top;
+  border-radius: 3px;
+}
+
+.imagess{
+  width: 400px;
+  min-width: 100%;
+  height: 250px;
+  object-fit:contain;
+}
+
+.definition{
+  flex-wrap: nowrap;
+  display: flex;
+  position:absolute;
+  color: white;
+  font-weight: bolder;
+  background-color: black;
+  padding: 10px 100%;
+  bottom: 0px;
+}
