@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Signup</title>
+  <link rel="stylesheet" type="text/css" href="signup.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<img class="wave" src="images/wave.png">
+	  <div class="container">
+		  <div class="img">
+			  <img src="images/male-sidewave-1.svg">
+		  </div>
+		    <div class="login-content">
+			    <form action="index.html">
+				      <h2 class="title" style="
+              font-size: 25px;
+              ">Welcome To Splendid</h>
+           		  <div class="input-div one">
+                    <div class="i">
+                      <i class="fas fa-user" style="
+                      font-size: 20px;
+                      "></i>
+                  </div>
+                  <div class="div">
+                      <h5 style="
+                      font-size: 16px;
+                      ">name</h5>
+                      <input type="text" class="input" > <!--here take "	USERNAME"-->
+                  </div>
+                </div>
+
+                <div class="input-div one">
+                  <div class="i">
+                      <i class="fas fa-envelope" style="
+                      font-size: 20px;
+                      "></i> 
+                  </div>
+                  <div class="div">
+                      <h5 style="
+                      font-size: 16px;
+                      ">mail</h5>
+                      <input type="email" class="input">   <!--here take "EMAIL ADDRESS"-->
+                  </div>
+                </div>
+
+                <div class="input-div one">
+                  <div class="i">
+                      <i class="fas fa-phone" style="
+                      font-size: 20px;
+                      "></i>
+                  </div>
+                  <div class="div">
+                    <h5 style="font-size: 16px;">phone number</h5>
+                    <input type="text" class="input">
+                </div>
+                </div>
+                <div class="input-div pass">
+                  <div class="i"> 
+                      <i class="fas fa-lock" style="
+                      font-size: 20px;
+                      "></i>
+                  </div>
+                  <div class="div">
+                      <h5 style="font-size: 16px;">Password</h5> 
+                      <input type="password" class="input">
+                  </div>
+                </div>
+                <div class="input-div pass">
+                  <div class="i"> 
+                      <i class="fas fa-lock" style="
+                      font-size: 20px;
+                      "></i>
+                  </div>
+                  <div class="div">
+                      <h5 style="font-size: 16px;">Re-Enter Password</h5>
+                      <input type="password" class="input" id="getPassword">
+                      <div class="whiteblock"></div>
+                      <span class="eye" onclick="eyefun()">
+                        <i id="hide2" class="fas fa-eye-slash" style="display: block"></i>
+                        <i id="hide1" class="fas fa-eye" style="display: none"></i>
+                      </span>
+                      <script>
+                        function eyefun(){
+                          let x = document.getElementById("getPassword");
+                          let y = document.getElementById("hide1");
+                          let z = document.getElementById("hide2");
+  
+                          if(x.type === 'password'){
+                            x.type = "text"
+                            y.style.display = "block";
+                            z.style.dispaly = "none";
+                          }
+  
+                          else{
+                            x.type = "password";
+                            y.style.display = "none";
+                            z.style.display = "block";
+                          }
+                        }
+                      </script>
+  
+                  </div>
+                </div>
+                <a href="#" style="margin-top: 8px;">send otp</a>
+                <a href="signinpage.html" target="_self" class="final">Already have an account?&nbsp;Login</a>
+          </form>
+      </div>
+    </div>
+<!------------------------------ All Here Is JAVA Script Area  --------------------------------->    
+    <script>
+      const inputs = document.querySelectorAll(".input");
+
+      function addcl(){
+        let parent = this.parentNode.parentNode;
+        parent.classList.add("focus");
+      }
+
+      function remcl(){
+        let parent = this.parentNode.parentNode;
+        if(this.value == ""){
+          parent.classList.remove("focus");
+        }
+      }
+
+      inputs.forEach(input => {
+        input.addEventListener("focus", addcl);
+        input.addEventListener("blur", remcl);
+      });
+    </script>
+</body>
+</html>

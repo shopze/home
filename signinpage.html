@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Log In</title>
+	<link rel="stylesheet" type="text/css" href="signinpage.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<img class="wave" src="images/wave-1.png">
+	<div class="container">
+		<div class="img">
+			<img src="images/side-male-avatar.svg">
+		</div>
+		<div class="login-content">
+			<form action="index.html">
+				<img src="images/male-avatar.svg">
+				<h2 class="title">Welcome</h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>Username</h5>
+           		   		<input type="text" class="input"> 
+           		   </div>
+           		</div>
+							
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5>Password</h5>
+           		    	<input type="password" class="input" id="getPassword"> 
+										<div class="whiteblock"></div>
+										<span class="eye" onclick="eyefun()">
+											<i id="hide2" class="fas fa-eye-slash" style="display: block"></i>
+											<i id="hide1" class="fas fa-eye" style="display: none"></i>
+										</span>
+										<script>
+											function eyefun(){
+												let x = document.getElementById("getPassword");
+												let y = document.getElementById("hide1");
+												let z = document.getElementById("hide2");
+
+												if(x.type === 'password'){
+													x.type = "text"
+													y.style.display = "block";
+													z.style.dispaly = "none";
+												}
+
+												else{
+													x.type = "password";
+													y.style.display = "none";
+													z.style.display = "block";
+												}
+											}
+										</script>
+            	   </div>
+            	</div>
+            	<a href="#">Forgot Password?</a>
+            	<input type="submit" action="index.html" class="btn" value="Login">
+              <a href="signup.html" target="_self" class="final">Don't have an account?<span> Signup</span></a>
+            </form>
+        </div>
+    </div>
+<!------------------------------ All Here Is JAVA Script Area  --------------------------------->
+    <script>
+			const inputs = document.querySelectorAll(".input");
+
+
+			function addcl(){
+				let parent = this.parentNode.parentNode;
+				parent.classList.add("focus");
+			}
+
+			function remcl(){
+				let parent = this.parentNode.parentNode;
+				if(this.value == ""){
+					parent.classList.remove("focus");
+				}
+			}
+
+
+			inputs.forEach(input => {
+			input.addEventListener("focus", addcl);
+			input.addEventListener("blur", remcl);
+			});
+		</script>
+</body>
+</html>
