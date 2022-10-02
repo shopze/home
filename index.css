@@ -13,9 +13,10 @@
 
 body{
   height: 100%;
-  width:100%;
+  width:100vw;
   background-color: lightgray;
   position: relative;
+
 }
 /* MEDIA-QUERY-DETAILS
 @media(max-width: 1018px){
@@ -140,6 +141,7 @@ body{
   /* background-color: rgb(66, 223, 87); */
   min-width: 200px;
   flex-shrink: 200;
+  position:relative;
 }
 
 .signup, .login, .cart {
@@ -150,6 +152,7 @@ body{
   font-size: 500;
   padding-left: 10px;
   cursor: pointer;
+  position: relative;
 }
 
 .cart_icon{
@@ -158,3 +161,35 @@ body{
   padding-right: 5px;
 }
 
+.bottom_page{
+  margin-right: 33px;
+  bottom: 0px;
+  background-color: #233c68;
+  width: 100%;
+  height: 250px;
+}
+
+.unwanted_1{
+  position: absolute;
+  right:-210px;
+  font-weight: bold;
+  color: black;
+}
+
+.unwanted_2{
+  position: absolute;
+  right:-130px;
+  font-weight: bold;
+  color: black;
+}
+
+.cart{
+  position: absolute;
+  right:-200px;
+  font-weight: bold;
+  color: black;
+}
+
+.unwanted_3{
+  color: black;
+}
